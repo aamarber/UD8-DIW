@@ -1,11 +1,10 @@
 import { Fragment } from 'react'
+import CalendarTitle from './CalendarTitle'
 
-function suma(a,b) {
-  return a + b;
-}
 
-function Calendario() {
-  const title = <h1>Enero {suma(2000,222)}</h1>
+function Calendar(props) {
+  const { year, month } = props
+
   const days = [
     <div key='1'>1</div>,
     <div key='2'>2</div>,
@@ -14,9 +13,7 @@ function Calendario() {
 
   return (
     <div>
-      <div id='title_container'>
-        {title}
-      </div>
+      <CalendarTitle month={month} year={year}/>
       <div id='days_container'>
         {days}
       </div>
@@ -28,7 +25,7 @@ function App() {
   return (
     <Fragment>
       <h1>Super calendar</h1>
-      <Calendario />
+      <Calendar year={2222} month={1}/>
     </Fragment>
   )
 }
