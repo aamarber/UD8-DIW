@@ -1,15 +1,24 @@
-import { Fragment } from "react"
+import { Fragment } from 'react'
+
+function suma(a,b) {
+  return a + b;
+}
 
 function Calendario() {
+  const title = <h1>Enero {suma(2000,222)}</h1>
+  const days = [
+    <div>1</div>,
+    <div>2</div>,
+    <div>3</div>
+  ]
+
   return (
     <div>
-      <div id='titulo'>
-        <h1>Enero 2222</h1>
+      <div id='title_container'>
+        {title}
       </div>
-      <div id='dias'>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+      <div id='days_container'>
+        {days}
       </div>
     </div>
   )
@@ -18,7 +27,7 @@ function Calendario() {
 function App() {
   return (
     <Fragment>
-      <h1>Super calendario</h1>
+      <h1>Super calendar</h1>
       <Calendario />
     </Fragment>
   )
