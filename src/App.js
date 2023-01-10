@@ -7,9 +7,9 @@ function suma(a,b) {
 function Calendario() {
   const title = <h1>Enero {suma(2000,222)}</h1>
   const days = [
-    <div>1</div>,
-    <div>2</div>,
-    <div>3</div>
+    <div key='1'>1</div>,
+    <div key='2'>2</div>,
+    <div key='3'>3</div>
   ]
 
   return (
