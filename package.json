@@ -1,9 +1,8 @@
 {
-  "name": "react-calendar",
+  "name": "react-examples",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:CEED-2022/react-calendar.git",
-  "author": "Alvaro Maceda <alvaro.maceda@ceedcv.es>",
+  "author": "Alvaro Maceda <alvaro@alvaromaceda.es>",
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --mode=development --",
@@ -14,6 +13,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
     "babel-loader": "^9.1.2",
     "eslint": "^8.31.0",
     "html-loader": "^4.2.0",
