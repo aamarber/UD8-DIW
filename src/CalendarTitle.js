@@ -3,7 +3,7 @@ function proper(string) {
 }
 
 function CalendarTitle({month, year}) {
-  const date = new Date(month, year-1, 1)
+  const date = new Date(year, month-1, 1)
   const monthName = proper(date.toLocaleString('default',{ month: 'long' }))
 
   return (
