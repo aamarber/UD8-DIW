@@ -2,13 +2,14 @@
 import Day from "./Day"
 
 function Week(props) {
-  const { days } = props
+  const { days, selected } = props
+  const { click } = props
 
   return (
     <div className='week'>
       {
         days.map((day, index) =>
-          <Day key={index} number={day} weekend={index == 5 || index == 6}/>
+          <Day key={index} number={day} selected={day==selected} click={click} weekend={index == 5 || index == 6}/>
         )
       }
     </div>

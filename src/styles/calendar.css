@@ -27,3 +27,8 @@
   font-weight: bold;
   font-size: 20px;
 }
+
+.week .day.selected {
+  border: 2px solid blue;
+}
+
