@@ -7,6 +7,7 @@ function App() {
     <div className="app">
       <h1>Super calendar</h1>
       <CalendarClass year={2023} month={1}/>
+      <hr/>
       <Calendar year={2023} month={1}/>
     </div>
   )
