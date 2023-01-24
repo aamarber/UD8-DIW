@@ -9,11 +9,18 @@ import banana from "./banana.png";
 
 function Conditional(props) {
 
-  const [showImage, setShowImage] = useState(true)
+  const [showImage, setShowImage] = useState(false)
+  const [showMethod, setShowMethod] = useState("list")
 
   const data = [
     "milk", "eggs", "bread", "apples", "bananas", "chicken", "pasta"
   ]
+
+  const display = {
+    list: <List data={data}/>,
+    table: <Table data={data}/>,
+    text: <Text data={data}/>
+  }
 
   return(
     <>
@@ -21,13 +28,11 @@ function Conditional(props) {
       <br/>
       { showImage && <img src={banana}/> }
       <br/>
-      <button>List</button>
-      <button>Table</button>
-      <button>Text</button>
+      <button onClick={ () => setShowMethod('list')}>List</button>
+      <button onClick={ () => setShowMethod('table')}>Table</button>
+      <button onClick={ () => setShowMethod('text')}>Text</button>
       <br/>
-      <List data={data}/>
-      <Table data={data}/>
-      <Text data={data}/>
+      { display[showMethod] }
     </>
   )
 }
