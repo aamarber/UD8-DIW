@@ -5,7 +5,8 @@ import './users.css'
 function Users(props) {
 
   const [user, setUser] = useState()
-  const [count, setCount] = useState(0)
+  // const user = 'user1'
+  const [color, setColor] = useState('red')
 
   return(
     <>
@@ -13,8 +14,9 @@ function Users(props) {
       <button onClick={() => setUser('user2')}>User 2</button>
       <button onClick={() => setUser('user3')}>User 3</button>
       <br/>
-      <button onClick={() => setCount(count+1)}>+</button>{count}
-      <User user={user} />
+      <button onClick={() => setColor('red')}>red</button>
+      <button onClick={() => setColor('blue')}>blue</button>
+      <User user={user} color={color}/>
     </>
   )
 }

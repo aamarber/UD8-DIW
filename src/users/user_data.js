@@ -1,6 +1,6 @@
 
-const MIN=300
-const MAX=1000
+const MIN=2000
+const MAX=4000
 
 
 const fakeData = {
