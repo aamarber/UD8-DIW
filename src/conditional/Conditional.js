@@ -26,7 +26,7 @@ function Conditional(props) {
     <>
       <button onClick={ () => setShowImage(!showImage)}>Toggle image</button>
       <br/>
-      { showImage && <img src={banana}/> }
+      { showImage ? <img src={banana}/> : 'No image' }
       <br/>
       <button onClick={ () => setShowMethod('list')}>List</button>
       <button onClick={ () => setShowMethod('table')}>Table</button>
