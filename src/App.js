@@ -1,13 +1,11 @@
-import Calendar from './Calendar'
-import CalendarClass from './CalendarClass'
+import Calendar from './calendar/Calendar'
+import CalendarClass from './calendar/CalendarClass'
 import './styles/app.css'
 
 function App() {
   return (
     <div className="app">
       <h1>Super calendar</h1>
-      <CalendarClass year={2023} month={1}/>
-      <hr/>
       <Calendar year={2023} month={1}/>
     </div>
   )
