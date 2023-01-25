@@ -1,5 +1,6 @@
 import { useState } from "react"
 import User from "./User"
+import UserHook from "./UserHook"
 import './users.css'
 
 function Users(props) {
@@ -16,7 +17,7 @@ function Users(props) {
       <br/>
       <button onClick={() => setColor('red')}>red</button>
       <button onClick={() => setColor('blue')}>blue</button>
-      <User user={user} color={color}/>
+      <UserHook user={user} color={color}/>
     </>
   )
 }
