@@ -4,6 +4,7 @@ import Home from './Home'
 import Exam from './Exam'
 import Exercises from './Exercises'
 import ErrorPage from './ErrorPage'
+import Exercise from './Exercise'
 
 const routes = [
   {
@@ -23,6 +24,10 @@ const routes = [
         path: "exercises",
         element: <Exercises />,
       },
+      {
+        path: "exercise/:id",
+        element: <Exercise />,
+      }
     ]
   }
 ]
