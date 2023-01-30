@@ -7,7 +7,10 @@ function Nav() {
       <nav>
         <ul>
           <li>
-            <a href="/exam">Exam</a>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/exam">Exam</Link>
           </li>
           <li>
             <Link to="/exercises">Exercises</Link>
