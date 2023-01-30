@@ -7,23 +7,16 @@ import Exercises from './Exercises'
 const routes = [
   {
     path: "/",
-    element: <Layout />,
-    children: [
-      {
-        path: "/",
-        element: <Home/>,
-      },
-      {
-        path: "/exam",
-        element: <Exam />,
-      },
-      {
-        path: "/exercises",
-        element: <Exercises />
-      },
-
-    ],
-  }
+    element: <Home/>,
+  },
+  {
+    path: "exam",
+    element: <Exam />,
+  },
+  {
+    path: "exercises",
+    element: <Exercises />,
+  },
 ]
 const router = createBrowserRouter(routes)
 

@@ -1,9 +1,13 @@
 import { RouterProvider } from 'react-router-dom'
 import { router } from './routes'
+import Nav from './Nav'
 
 function RoutedApp(){
   return (
-    <RouterProvider router={router} />
+    <div className='layout'>
+      <Nav />
+      <RouterProvider router={router} />
+    </div>
   )
 }
 
