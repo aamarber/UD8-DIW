@@ -13,7 +13,7 @@ function getWeeksInMonth(month, year) {
   let weeks = []
   let week = []
 
-  for (let i = MONDAY i < weekDay(date) i++) {
+  for (let i = MONDAY; i < weekDay(date); i++) {
     week.push(null)
   }
 
