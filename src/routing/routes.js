@@ -3,11 +3,13 @@ import Layout from './Layout'
 import Home from './Home'
 import Exam from './Exam'
 import Exercises from './Exercises'
+import ErrorPage from './ErrorPage'
 
 const routes = [
   {
     path: "/",
     element: <Layout/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
