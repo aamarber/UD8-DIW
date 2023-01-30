@@ -1,5 +1,5 @@
 
-import Loading from "./Loading";
+import Loading from "./Loading"
 
 function WrapLoading(props) {
 
@@ -12,4 +12,4 @@ function WrapLoading(props) {
   )
 }
 
-export default WrapLoading;
+export default WrapLoading

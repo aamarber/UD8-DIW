@@ -4,7 +4,7 @@ import Loading from "./Loading"
 
 function User(props){
   const { user, color } = props
-  const { data, loading } = useGetUser(user);
+  const { data, loading } = useGetUser(user)
 
   console.log('Rendering user '+user)
 

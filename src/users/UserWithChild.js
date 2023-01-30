@@ -1,5 +1,5 @@
 import useGetUser from "./use_getUser"
-import WrapLoading from "./WrapLoading";
+import WrapLoading from "./WrapLoading"
 
 function UserHoC(props){
   const { user, color } = props

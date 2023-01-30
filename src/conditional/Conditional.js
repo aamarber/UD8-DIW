@@ -1,11 +1,11 @@
 import { useState
 
-} from "react";
+} from "react"
 import List from "./List"
 import Table from "./Table"
 import Text from "./Text"
 
-import banana from "./banana.png";
+import banana from "./banana.png"
 
 function Conditional(props) {
 

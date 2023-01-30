@@ -1,15 +1,15 @@
 
-import React from "react";
+import React from "react"
 import CalendarTitle
- from "./CalendarTitle";
+ from "./CalendarTitle"
 class CalendarClass extends React.Component {
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       selected: 0,
       patata: 'patata'
-    };
+    }
   }
 
   increment() {
@@ -47,10 +47,10 @@ class CalendarClass extends React.Component {
         <h2>{this.state.selected}</h2>
         <h2>{`Patata: ${this.state.patata}`}</h2>
       </div>
-    );
+    )
   }
 
 }
 
-export default CalendarClass;
+export default CalendarClass
 

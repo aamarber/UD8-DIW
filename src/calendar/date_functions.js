@@ -9,30 +9,30 @@ function weekDay(day) {
 function getWeeksInMonth(month, year) {
   const MONDAY = 1
 
-  let date = firstDayOfMonth(month, year);
-  let weeks = [];
+  let date = firstDayOfMonth(month, year)
+  let weeks = []
   let week = []
 
-  for (let i = MONDAY; i < weekDay(date); i++) {
-    week.push(null);
+  for (let i = MONDAY i < weekDay(date) i++) {
+    week.push(null)
   }
 
   while (date.getMonth() === month-1) {
       while (week.length < 7) {
-          week.push(date.getUTCDate());
-          date.setDate(date.getUTCDate() + 1);
+          week.push(date.getUTCDate())
+          date.setDate(date.getUTCDate() + 1)
           if (date.getMonth() !== month-1) {
             while (week.length < 7) {
-                week.push(null);
+                week.push(null)
             }
-            break;
+            break
           }
       }
-      weeks.push(week);
+      weeks.push(week)
       week = []
   }
 
-  return weeks;
+  return weeks
 }
 
 export {
