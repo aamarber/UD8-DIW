@@ -1,18 +1,29 @@
+import { Link, useNavigate } from "react-router-dom";
 
 function Nav() {
+
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate('/');
+  }
+
   return (
     <div className="menu">
       <h3>Menu</h3>
       <nav>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/exam">Exam</a>
+            <Link to="/exam">Exam</Link>
           </li>
           <li>
-            <a href="/exercises">Exercises</a>
+            <Link to="/exercises">Exercises</Link>
+          </li>
+          <li>
+            <button onClick={handleClick}>Home</button>
           </li>
         </ul>
       </nav>
