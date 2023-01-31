@@ -1,11 +1,11 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"
 
 function Nav() {
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   function handleClick() {
-    navigate('/');
+    navigate('/')
   }
 
   return (

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 
 function Exercise() {
 
-  let { id } = useParams();
+  let { id } = useParams()
 
   return (
     <div>

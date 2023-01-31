@@ -1,14 +1,14 @@
-import { useRef } from "react";
+import { useRef } from "react"
 
 function RefForm() {
 
-  const userRef = useRef();
-  const passwordRef = useRef();
+  const userRef = useRef()
+  const passwordRef = useRef()
 
   function focusUser() {
-    userRef.current.focus();
+    userRef.current.focus()
   }
-  
+
   function showPassword() {
     alert(passwordRef.current.value)
   }
@@ -26,4 +26,4 @@ function RefForm() {
   )
 }
 
-export default RefForm;
+export default RefForm
