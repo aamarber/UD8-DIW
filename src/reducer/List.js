@@ -1,18 +1,26 @@
-import { useState } from "react"
+import { useReducer } from "react"
 import NewItem from "./NewItem"
 import Items from "./Items"
 
-const initialItems = ['banana', 'apple', 'orange']
+import { initialState,reducer } from "./reducer"
 
 function List() {
 
-  const [items, setItems] = useState(initialItems)
+  const [state, dispatch] = useReducer(reducer, initialState)
+
+  function addItem(item) {
+    dispatch({type: 'ADD_ITEM', payload: item})
+  }
+
+  function deleteItem(item) {
+    dispatch({type: 'REMOVE_ITEM', payload: item})
+  }
 
   return(
     <>
       <h1>My list</h1>
-      <NewItem />
-      <Items items={items}/>
+      <NewItem onNewItem={addItem}/>
+      <Items items={state.items} onDelete={deleteItem}/>
     </>
   )
 

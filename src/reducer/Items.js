@@ -1,10 +1,12 @@
 
 function Items(props) {
+  const { onDelete, items } = props
+
   return (
     <ul>
-      {props.items.map((item, index) => (
+      {items.map((item, index) => (
         <li key={index}>
-          {item} <button>X</button>
+          {item} <button onClick={() => onDelete(index)}>X</button>
         </li>
       ))}
     </ul>
