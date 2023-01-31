@@ -1,14 +1,30 @@
 const initialState = {
-  items: ['banana', 'apple', 'orange']
+  items: ['banana', 'apple', 'orange'],
+  error: null
+}
+
+function error(state, error) {
+  return {
+    ...state,
+    error
+  }
+}
+
+function addItem(state, payload) {
+  if(!payload) return error(state, 'Item cannot be empty')
+  if(state.items.includes(payload)) return error(state, 'Item already exists')
+
+  return {
+    ...state,
+    items: [...state.items, payload],
+    error: null
+  }
 }
 
 function reducer(state, action) {
   switch (action.type) {
     case 'ADD_ITEM':
-      return {
-        ...state,
-        items: [...state.items, action.payload]
-      }
+      return addItem(state, action.payload)
     case 'REMOVE_ITEM':
       return {
         ...state,

@@ -21,6 +21,7 @@ function List() {
       <h1>My list</h1>
       <NewItem onNewItem={addItem}/>
       <Items items={state.items} onDelete={deleteItem}/>
+      {state.error && <p>{state.error}</p>}
     </>
   )
 
