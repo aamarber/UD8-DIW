@@ -3,6 +3,7 @@ import CalendarClass from './calendar/CalendarClass'
 import './styles/app.css'
 import RefForm from './useRef/RefForm'
 import List from './reducer/List'
+import ReduxList from './redux-toolkit/ReduxList'
 
 function App() {
   return (
