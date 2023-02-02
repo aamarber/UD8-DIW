@@ -1,3 +1,12 @@
+/*
+
+THIS FILE IS NOT USED IN THIS EXAMPLE.
+IT'S HERE IN CASE YOU WANT TO COMPARE THE REDUX TOOLKIT VERSION
+WITH THE USEREDUCER VERSION.
+
+*/
+
+
 const initialState = {
   items: ['banana', 'apple', 'orange'],
   error: null

@@ -2,30 +2,31 @@ import { useReducer } from "react"
 import NewItem from "./NewItem"
 import Items from "./Items"
 
-import store from "./store"
-import { Provider } from "react-redux"
-
-import { initialState,reducer } from "./reducer"
+import { addItem, removeItem } from "./listSlice"
+import { useDispatch, useSelector } from "react-redux"
 
 function ReduxList() {
 
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const items = useSelector(state => state.list.items)
+  const error = useSelector(state => state.list.error)
 
-  function addItem(item) {
-    dispatch({type: 'ADD_ITEM', payload: item})
+  const dispatch = useDispatch()
+
+  function add(item) {
+    dispatch(addItem(item))
   }
 
-  function deleteItem(item) {
-    dispatch({type: 'REMOVE_ITEM', payload: item})
+  function remove(item) {
+    dispatch(removeItem(item))
   }
 
   return(
-    <Provider store={store}>
+    <>
       <h1>My list</h1>
-      <NewItem onNewItem={addItem}/>
-      <Items items={state.items} onDelete={deleteItem}/>
-      {state.error && <p>{state.error}</p>}
-    </Provider>
+      <NewItem onNewItem={add}/>
+      <Items items={items} onDelete={remove}/>
+      {error && <p>{error}</p>}
+    </>
   )
 
 }
