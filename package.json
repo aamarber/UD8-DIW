@@ -1,12 +1,12 @@
 {
   "name": "react-examples",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./main/index.js",
   "author": "Alvaro Maceda <alvaro@alvaromaceda.es>",
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --mode=development --",
-    "eslint": "eslint ./src",
+    "eslint": "eslint ./",
     "build": "webpack --mode production",
     "build-dev": "webpack --mode development"
   },
@@ -28,9 +28,12 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.8.0"
+    "react-router-dom": "^6.8.0",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0"
   }
 }

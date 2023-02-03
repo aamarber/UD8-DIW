@@ -5,14 +5,22 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     mode: "development",
     entry: {
-      index: path.resolve(__dirname, "src", "index.js")
+      index: path.resolve(__dirname, "main", "index.js")
     },
     output: {
       path: path.resolve(__dirname, "dist"),
-      publicPath: '/'
+      filename: '[name].js'
     },
     module: {
       rules: [
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+              MiniCssExtractPlugin.loader,
+              "css-loader",
+              "sass-loader",
+          ]
+        },
         {
           test: /\.css$/,
           use: [
@@ -39,7 +47,7 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: path.resolve(__dirname, "src", "index.html"),
+        template: path.resolve(__dirname, "main", "index.html"),
         chunks: ['index']
       }),
       new MiniCssExtractPlugin()
