@@ -1,7 +1,22 @@
+@use './calendarTheme' as theme;
+@use '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
 .calendar {
     display: block;
+    max-width: 25em;
+    background-color: theme.$bg-color;
+    font-family: theme.$font;
+    color: theme.$font-color;
+
+    button{
+        @extend .btn;
+
+        background-color: theme.$selected-color;
+        margin: 1em;
+
+    }
 }
   
 .calendar.holidays {
-background-color: aquamarine;
+    background-color: theme.$holidays-bg-color;
 }

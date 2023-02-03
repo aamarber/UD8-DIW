@@ -1,0 +1,5 @@
+@use './calendarTheme' as theme;
+
+h1.calendarTitle{
+    color: theme.$secondary-color;
+}

@@ -1,19 +1,24 @@
+@use './calendarTheme' as theme;
+
 .day {
+    text-align: center;
+    vertical-align: middle;
+    width: 3em;
+    height: 3em;
+    color: theme.$font-color;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    flex: 1;
-    border: 1px solid black;
-    padding: 5px;
+    cursor: pointer;
 
     &.weekend {
-        background-color: red;
+        background-color: theme.$secondary-color;
+        color: theme.$secondary-font-color;
         font-weight: bold;
         font-size: 20px;
     }
 
-    .selected {
-        border: 2px solid blue;
+    &.selected {
+        border: 3px solid theme.$selected-color;
     }
 }
