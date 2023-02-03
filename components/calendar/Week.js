@@ -1,5 +1,6 @@
 
 import Day from "./Day"
+import './styles/week.scss';
 
 function Week(props) {
   const { days, selected } = props

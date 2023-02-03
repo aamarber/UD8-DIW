@@ -1,3 +1,5 @@
+import './styles/day.scss';
+
 function Day(props) {
   const { number } = props
   const { weekend=false, selected=false } = props

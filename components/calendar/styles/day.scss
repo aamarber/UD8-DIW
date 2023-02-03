@@ -1,0 +1,19 @@
+.day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid black;
+    padding: 5px;
+
+    &.weekend {
+        background-color: red;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .selected {
+        border: 2px solid blue;
+    }
+}

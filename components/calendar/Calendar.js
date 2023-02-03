@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-import './styles/calendar.css'
+import './styles/calendar.scss'
 import CalendarTitle from './CalendarTitle'
 import Week from './Week'
 
