@@ -1,7 +1,8 @@
-@use './navbarConstants';
+// @use './lightNavbarTheme' as theme;
+@use './clouredNavbarTheme' as theme;
 
 .nav-item{
     .nav-link{
-        color: navbarConstants.$font-color;
+        color: theme.$font-color;
     }
 }

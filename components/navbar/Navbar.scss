@@ -1,9 +1,10 @@
-@use './navbarConstants';
+// @use './lightNavbarTheme' as theme;
+@use './clouredNavbarTheme' as theme;
 
 .navbar{
-    background-color: navbarConstants.$bg-color;
+    background-color: theme.$bg-color;
 
     .navbar-brand{
-        color: navbarConstants.$font-color;
+        color: theme.$font-color;
     }
 }
