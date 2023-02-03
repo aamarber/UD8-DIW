@@ -1,7 +1,6 @@
 import React from 'react'
 import NavbarItem from './NavbarItem'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import './Navbar.scss'
 
 function Navbar(props) {
   const { navItems } = props;
