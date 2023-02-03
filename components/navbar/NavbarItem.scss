@@ -1,0 +1,7 @@
+@use './navbarConstants';
+
+.nav-item{
+    .nav-link{
+        color: navbarConstants.$font-color;
+    }
+}

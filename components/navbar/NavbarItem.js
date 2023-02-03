@@ -1,4 +1,5 @@
 import React from 'react'
+import './NavbarItem.scss'
 
 function NavbarItem(props) {
     const { link, displayText } = props;

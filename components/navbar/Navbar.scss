@@ -1,0 +1,9 @@
+@use './navbarConstants';
+
+.navbar{
+    background-color: navbarConstants.$bg-color;
+
+    .navbar-brand{
+        color: navbarConstants.$font-color;
+    }
+}
